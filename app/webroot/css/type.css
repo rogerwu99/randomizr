@@ -1,0 +1,433 @@
+/* Copyright © klickable.tv - Hand coded by Aaron Humphreys */
+
+.bodycopy {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 15px;
+	letter-spacing:-1px;
+	color: #414142;
+}
+.bodycopy_reg {font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 22px;
+	letter-spacing:-1px;
+	color: black;
+	text-align:center;
+	font-weight:bold;
+	margin-right:40px;
+	padding: 2px 1px 1px 1px;
+}
+
+.bodycopy a:link {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 15px;
+	letter-spacing:-1px;
+	margin: 15px;
+	color: #0099FF;
+	text-decoration: underline;
+}
+
+.bodycopy a:visited {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 15px;
+	letter-spacing:-1px;
+	color: #0099FF;
+	text-decoration: underline;
+}
+
+.bodycopy a:hover {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 15px;
+	letter-spacing:-1px;
+	color: #414142;
+	text-decoration: none;
+}
+
+.bodycopy a:active {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 15px;
+	letter-spacing:-1px;
+	color: #0099FF;
+	text-decoration: underline;
+}
+.bodycopyblue{font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 15px;
+	letter-spacing:-1px;
+	color: #0099FF;
+	text-decoration: none;
+}
+
+
+.breadcrumbs {
+	font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px;
+	letter-spacing:-1px;
+	color: #414142;
+}
+.breadcrumbs1 {
+	font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 9px;
+	letter-spacing:-1px;
+	color: #414142;
+}
+
+.breadcrumbs a:link {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px;
+	letter-spacing:-1px;
+	color: #0099FF;
+	text-decoration: underline;
+}
+
+.breadcrumbs a:visited {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px;
+	letter-spacing:-1px;
+	color: #0099FF;
+	text-decoration: underline;
+}
+
+.breadcrumbs a:hover {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px;
+	letter-spacing:-1px;
+	color: #414142;
+	text-decoration: none;
+}
+
+.breadcrumbs a:active {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px;
+	letter-spacing:-1px;
+	color: #0099FF;
+	text-decoration: underline;
+}
+
+
+
+.smallercopy {
+	width:180px;
+	vertical-align:sub;
+	font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px;
+	letter-spacing:-1px;
+	color: #414142;
+}
+.smallercopy_reg {
+	width:260px;
+	vertical-align:sub;
+	font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px;
+	letter-spacing:-1px;
+	color: black;
+	margin-left:10px;
+	padding: 9px 1px 1px;
+}
+.smallercopy_err {
+	width:260px;
+	vertical-align:sub;
+	font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px;
+	letter-spacing:-1px;
+	color: #414142;
+	margin-left:10px;
+}
+.smallercopy1 {
+	vertical-align:sub;
+	font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px;
+	letter-spacing:-1px;
+	color: #414142;
+}
+.smallercopy_nav {
+	width:100%;
+	vertical-align:sub;
+	font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px;
+	letter-spacing:-1px;
+	color: #414142;
+	margin-left:60px;
+	text-align:center;
+}
+.smallercopy_nav a:link {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px;
+	letter-spacing:-1px;
+	color: #0099FF;
+	text-decoration: underline;
+}
+.smallercopy_nav a:visited {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px;
+	letter-spacing:-1px;
+	color: #0099FF;
+	text-decoration: underline;
+}
+
+.smallercopy_nav_sel {
+	width:260px;
+	font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; font-weight:bold;
+	letter-spacing:-1px;
+	color: #414142;
+	margin-left:10px;
+}
+.smallercopy_nav_selected {
+	width:260px;
+	font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; font-weight:bold;
+	letter-spacing:-1px;
+	color: #414142;
+}
+.smallercopy_cap {
+	vertical-align:super;
+	font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px;
+	letter-spacing:-1px;
+	color: #414142;
+	margin-left:10px;
+	text-align:center;
+}
+.smallercopy_user_home {
+	font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px;
+	line-height: 0.25;
+	letter-spacing:-1px;
+	color: #414142;
+	text-align:left;
+}
+
+.smallercopy a:link {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px;
+	letter-spacing:-1px;
+	color: #0099FF;
+	text-decoration: underline;
+}
+
+.smallercopy a:visited {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px;
+	letter-spacing:-1px;
+	color: #0099FF;
+	text-decoration: underline;
+}
+
+.smallercopy a:hover {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px;
+	letter-spacing:-1px;
+	color: #414142;
+	text-decoration: none;
+}
+
+.smallercopy a:active {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px;
+	letter-spacing:-1px;
+	color: #0099FF;
+	text-decoration: underline;
+}
+
+
+
+.smallercopyred {
+	font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px;
+	letter-spacing:-1px;
+	color: #FF0000;
+}
+
+.smallercopygreen {
+	font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px;
+	letter-spacing:-1px;
+	color: #7fc242;
+}
+
+
+
+
+
+h1 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 25px;
+	letter-spacing:-2.5px;
+	color: #414142;
+	margin:0px;
+	border:0px;
+	font-weight:normal;
+}
+
+h1 a:link {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 30px;
+	letter-spacing:-2.5px;
+	color: #0099FF;
+	margin:0px;
+	border:0px;
+	font-weight:normal;
+}
+
+h1 a:visited {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 30px;
+	letter-spacing:-2.5px;
+	color: #0099FF;
+	margin:0px;
+	border:0px;
+	font-weight:normal;
+}
+
+h1 a:hover {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 30px;
+	letter-spacing:-2.5px;
+	color: #414142;
+	margin:0px;
+	border:0px;
+	font-weight:normal;
+}
+
+h1 a:active {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 30px;
+	letter-spacing:-2.5px;
+	color: #0099FF;
+	margin:0px;
+	border:0px;
+	font-weight:normal;
+}
+
+
+
+
+.smalltitle {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 19px;
+	letter-spacing:-1px;
+	color: #414142;
+	font-weight:normal;
+}
+
+
+
+
+
+
+.bodyblue {font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 13px;
+	text-decoration: none;
+	color: #0099FF;
+}
+
+.smallercopyred {font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 12px;
+	text-decoration: none;
+	color: #ff0000;
+}
+.smallercopyred a:visited{font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 12px;
+	text-decoration: underline;
+	color: #ff0000;
+}
+.smallercopyred a:link{font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 12px;
+	text-decoration: underline;
+	color: #ff0000;
+}
+
+
+
+
+
+.bodycopywhite {font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 10px;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+.bodycopywhite a:link {font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 10px;
+	text-decoration: underline;
+	color: #FFFFFF;
+}
+
+.bodycopywhite a:visited {font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 10px;
+	text-decoration: underline;
+	color: #FFFFFF;
+}
+
+.bodycopywhite a:hover {font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 10px;
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+.bodycopywhite a:active {font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 10px;
+	text-decoration: underline;
+	color: #FFFFFF;
+}
+
+
+
+
+.bodycopylargewhite {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 19px;
+	letter-spacing:-1px;
+	color: #FFFFFF;
+}
+
+.bodycopywhite2 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 15px;
+	letter-spacing:-1px;
+	color: #FFFFFF;
+}
+
+.bodycopywhite2 a:link {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 15px;
+	letter-spacing:-1px;
+	color: #0099FF;
+	text-decoration: underline;
+}
+
+.bodycopywhite2 a:visited {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 15px;
+	letter-spacing:-1px;
+	color: #0099FF;
+	text-decoration: underline;
+}
+
+.bodycopywhite2 a:hover {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 15px;
+	letter-spacing:-1px;
+	color: #0099FF;
+	text-decoration: none;
+}
+
+.smallercopywhite {
+	font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px;
+	letter-spacing:-1px;
+	color: #FFFFFF;
+}
+
+.smallercopywhite a:link {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px;
+	letter-spacing:-1px;
+	color: #0099FF;
+	text-decoration: underline;
+}
+
+.smallercopywhite a:visited {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px;
+	letter-spacing:-1px;
+	color: #0099FF;
+	text-decoration: underline;
+}
+
+.smallercopywhite a:hover {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px;
+	letter-spacing:-1px;
+	color: #0099FF;
+	text-decoration: none;
+}
+
+.smallercopywhite a:active {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px;
+	letter-spacing:-1px;
+	color: #0099FF;
+	text-decoration: underline;
+}
+img.top {vertical-align:middle;}
+#container {
+    display: table;
+	//border-color:#ff0000;
+	//border-style:solid;
+	//border-width:5px;
+}
+
+#row  {
+    display: table-row;
+	//border-color:#0000ff;
+	//border-style:double;
+//border-width:3px;
+}
+
+#left, #right, #middle {
+    display: table-cell;
+	padding:3px;
+//border-color:#00ff00;
+//border-style:ridge;
+//border-width:2px;
+
+vertical-align:top;}
+#middle_special {
+    display: table-cell;
+	height:50px;
+	width:50px;
+text-align: center;
+//border-color:#00ff00;
+//border-style:ridge;
+//border-width:2px;
+vertical-align:middle;
+}
+#middle_filler{
+	border-color:#000000;
+	border-width:2px;
+	width:2px;
+	height:50px;
+	background-color:#000000;
+}#middle_2span{
+	display:table-cell;
+	
+	border-color:#000000;
+	border-width:2px;
+	width:2px;
+	height:50px;
+	background-color:#000000;
+}
+#biginput{
+	width:100px;
+	height:40px;
+}
+#middle_content{
+	display:table-cell;
+	height:50px;
+	width:120px;
+	vertical-align:top;
+	padding-right:5px;
+	padding-left:5px;
+}#middle_content1{
+	display:table-cell;
+	height:50px;
+	width:500px;
+	vertical-align:top;
+	padding-right:5px;
+	padding-left:5px;
+}

@@ -1,0 +1,218 @@
+/* The specific style rules used to suggest rendering */
+/* for the CSS table design example, starts here */
+
+DIV.base-layer {
+  background: #9fc5f8; border: solid #333333 1px; color: #000000;
+  margin: 0.5em 12px 0.5em 12px; 
+  padding: 0; text-align: center; width: auto;
+  margin-top:-2%;
+}
+
+DIV.table-row-head{
+  background: #ffffff; border: solid #000000 1px; color: #000000;
+  margin-top: 0;  margin-bottom: 0; margin-left: auto; margin-right: auto;
+  padding: 0; text-align: left; width: 96%; font-weight: bold; 
+  display:none;
+}
+DIV.table-row-head-mobile{
+  background: #ffffff; border: solid #000000 1px; color: #000000;
+  margin-top: 0;  margin-bottom: 0; margin-left: auto; margin-right: auto;
+  padding: 0; text-align: left; width: 96%; font-weight: bold; 
+ 
+}
+
+DIV.table-row-odd{
+  background: #b6b6b6; border: solid #000000 1px; color: #000000;
+  margin-top: 0; margin-right: auto; margin-bottom: 0; margin-left: auto;
+  padding: 0; text-align: left; width: 96%; height:auto;
+}
+DIV.table-row-even{
+  background: #cccccc; border: solid #000000 1px; color: #000000;
+  margin-top: 0; margin-right: auto; margin-bottom: 0; margin-left: auto;
+  padding: 0; text-align: left; width: 96%; height:auto;
+}
+/* Style rules for the 3 x 2 table example */
+
+DIV.left-container2 {
+  border: none; float: left; margin: 0; padding: 0; width: 50%;
+}
+
+DIV.right-container2 {
+  border: none; float: right; margin: 0; padding: 0; width: 50%;
+}
+
+/* Rules in detail that is used to suggest rendering for the */
+/* Nobel price winner table example. I still use some of the */
+/* generic rules as found above and below, but still..       */
+
+DIV.left-container13 {
+  border: none; float: left; margin: 0; padding: 0; width: 20%;
+}
+
+DIV.left-container23 {
+  border: none; float: left; margin: 0; padding: 0; width: 35%;
+}
+
+DIV.right-container13 {
+  border: none; float: right; margin: 0; padding: 0; width: 45%;
+}
+
+/* Rules in detail that is used to suggest rendering for the  10 by 5 int. */
+/* product table example. I still use some of the generic rules as found   */
+/* above and below, but still..                                            */
+
+/*DIV.left-layer11 {
+  border: none; float: left; margin: 0; padding: 0; width: 80%;
+}*/
+/*
+759
+275+250+100+40+75=740
+19
+*/
+DIV.left-layer12 {
+  border: none; float: left; margin: 0; padding: 0; width: 80px;
+}
+DIV.left-layer13 {
+  border: none; float: left; margin: 0; padding: 0; width: 100px;
+}
+DIV.left-layer14 {
+  border: none; float: left; margin: 0; padding: 0; width: 240px;
+}
+DIV.left-layer15 {
+  border: none; float: left; margin: 0; padding: 0; width: 265px;
+}
+DIV.right-layer11 {
+  border: none; float: right; margin: 0; padding: 0; width: 70px;
+}
+
+DIV.left-layer24 {
+  border: none; float: none; margin: 0; padding: 0; width: 55%; display: inline; text-align:left;
+  
+}
+DIV.left-layer22 {
+  border: none; float: none; margin: 0; padding: 0; width: 25%; display: inline;text-align:left;
+}
+DIV.left-layer22a {
+  display:none; border: none; float: left; margin: 0; padding: 0; width: 20%; 
+}
+DIV.left-edit-layer22 {
+  border: none; float: right; margin: 0; padding: 0; width: 20%; margin-right:5%; display: inline;text-align:right;
+}
+DIV.left-layer31 {
+  border: none; float: left; margin: 0; padding: 0; width: 305px; height:150px;
+}
+DIV.left-layer32 {
+  border: none; float: left; margin: 0; padding: 0; width: 200px; height:150px;
+}
+
+DIV.left-layer41 {
+  border: none; float: left; margin: 0; padding: 0; width: 50%; 
+}
+DIV.left-layer42 {
+  border: none; float: left; margin: 0; padding: 0; width: 100%; 
+}
+DIV.left-layer51 {
+  border: none; float: left; margin: 0; padding: 0; width: 30%; 
+}
+DIV.left-layer52 {
+  border: none; float: left; margin: 0; padding: 0; width: 70%; 
+}
+DIV.left-layer61 {
+  border: none; float: left; margin: 0; padding: 3; width: 33%; 
+  
+}
+DIV.left-layer71 {
+  border: none; float: none; margin: 0; padding: 0; width: 96%; text-align:left; margin-left:auto; margin-right:auto;
+}
+DIV.left-layer72 {
+  border: none; float: none; margin: 0; padding: 0; width: 96%; text-align:left; margin-left:auto;margin-right:auto;
+}
+DIV.left-layer81 {
+  border: none; float: none; margin: 0; padding: 0; width: 48%; text-align:left; margin-left:0;display: inline;
+}
+DIV.left-layer82 {
+  border: none; float: none; margin: 0; padding: 0; width: 0px; text-align:left; margin-left:25px; display:none;
+}
+DIV.left-layer83 {
+  border: none; float: none; margin: 0; padding: 0; width: 0px; text-align:left; margin-left:10px; display:none;
+}
+DIV.left-layer84 {
+  border: none; float: none; margin: 0; padding: 0; width: 48%; text-align:right;display: inline;
+}
+DIV.left-layer85 {
+  border: none; float: left; margin: 0; padding: 0; width: 0px; text-align:left; display:none;
+}
+SPAN.user-spacer {
+  min-height: 130px;
+  border-left: 1px solid gray;
+
+}
+
+DIV.left-layer92 {
+  border: none; float: left; margin: 0; padding: 0; width: 80px; display:none;
+}
+
+DIV.left-layer94 {
+  border: none; float: left; margin: 0; padding: 0; width: 240px; display:none;
+}
+
+DIV.left-layer41a {
+  border: none; float: left; margin: 0; padding: 0; width: 70%; 
+}
+DIV.left-layer41b {
+  border: none; float: left; margin: 0; padding: 0; width: 30%; 
+}
+
+
+
+
+DIV.table-top{
+	width:100%; height:150px; overflow-y:auto; 
+	display:none;
+}
+DIV.table-top-mobile{
+	width:100%;
+}
+DIV.table-profile-edit{
+	width:100%; height:60px; overflow-y:auto;
+}
+DIV.table-profile-edit-settings{
+	width:759px; height:180px; overflow-y:auto;
+}
+DIV.table-profile-edit-settings-for-user{
+	width:100%; height:260px; overflow-y:auto;
+}
+
+/* Watch out for this DIV... rule, it appears every now and then */
+
+DIV.space-line {
+  clear: both; margin: 0; padding: 0; width: auto;
+}
+
+/* Some rules for captions, headers and running text */
+
+H4.table-caption {
+  background: transparent; color: #3333cc; font-family: sans-serif;
+  font-size: 14px; font-style: italic; font-weight: bold; margin: 0;
+  padding: 0.3em; text-align: left; width: 100%;  display:none;
+}
+H4.table-caption-mobile {
+  background: transparent; color: #3333cc; font-family: sans-serif;
+  font-size: 14px; font-style: italic; font-weight: bold; margin: 0;
+  padding: 0.3em; text-align: center; width: auto; border: solid #000000 2px; 
+}
+
+H5.colhdr {
+  background: none #ffffcc; border: solid #3333cc 1px; color: #993333;
+  font-family: sans-serif; font-size: 1em; font-style: italic;
+  font-weight: normal; margin: 0; padding: 0.3em 0.3em 0 0.3em;
+  text-align: center; width: auto;
+}
+
+P.text {
+  border: solid #3333cc 1px; margin: 0; padding: 0.3em 0.3em 0 0.3em;
+  font-style: normal; font-size: 1em; text-align: center; text-indent: 0;
+  width: auto;
+}
+
+/* End of layer specific style rule set */
