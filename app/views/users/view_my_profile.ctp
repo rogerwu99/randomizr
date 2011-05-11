@@ -1,3 +1,4 @@
+
 <div id="leftcolumn_user" class="bodycopy" style="overflow:auto;">
      				
     <br /><br />
@@ -52,6 +53,55 @@ You are influenced by:<br />
 }
 	?>
 <? endif; ?>
+
+<?
+	$control_yi = $your_interests[0]->value;
+		$length=5;
+		$count=0;
+			for ($counter = 0; $counter<$length;$counter++){
+				if ($your_interests[$counter]->category!='staff-picks'){
+//					echo 'Category  :' .  $your_interests[$counter]->category;
+					$value = sprintf('%01.2f',$your_interests[$counter]->value / $control_yi);
+	//				echo 'Value of Match : '.$value;
+		//			echo '<br>';
+					$cats[$count]=$your_interests[$counter]->category;
+					$id[$count++]=$value;
+					
+				}
+				else $length++;
+			}
+		?>
+<?   echo '<img src=\'pchart/'. $id[0].'/'. $id[1] .'/' .$id[2].'/'.$id[3].'/'.$id[4].'/'.$cats[0].'/'.$cats[1].'/'.$cats[2].'/'.$cats[3].'/'.$cats[4].'/Influences/\' />';  ?>
+                <? if (!is_null($top_you) || (!empty($top_you))) : ?>    
+
+You are seen as :<br />
+<? for ($counter=0;$counter<5;$counter++){
+	echo (string)($counter+1).' '.$top_you[$counter]; 
+	?><br /><?
+}
+	?>
+<? endif; ?>
+<?
+			$control_am = $aboutme[0]->value;
+		$length=5;
+		$count=0;
+	//		echo 'About Me<br>';
+			for ($counter = 0; $counter<$length;$counter++){
+				if ($aboutme[$counter]->category!='staff-picks'){
+		//			echo 'Category  :' .  $aboutme[$counter]->category;
+					$value = sprintf('%01.2f',$aboutme[$counter]->value / $control_am);
+			//		echo 'Value of Match : '.$value;
+				//	echo '<br>';
+				$cats[$count]=$aboutme[$counter]->category;
+				$id[$count++]=$value;
+				}
+				else $length++;
+			}
+
+?>
+<?   echo '<img src=\'pchart/'. $id[0].'/'. $id[1] .'/' .$id[2].'/'.$id[3].'/'.$id[4].'/'.$cats[0].'/'.$cats[1].'/'.$cats[2].'/'.$cats[3].'/'.$cats[4].'/You/\' />';  ?>
+
+
 <? if (!is_null($top_movies) || (!empty($top_movies))) : ?>    
 Your Top 5 Movie Genres:<br />
 <? for ($counter=0;$counter<5;$counter++){
@@ -77,15 +127,6 @@ You frequent:<br />
 }
 	?>
     <? endif; ?>
-        <? if (!is_null($top_you) || (!empty($top_you))) : ?>    
-
-You are seen as :<br />
-<? for ($counter=0;$counter<5;$counter++){
-	echo (string)($counter+1).' '.$top_you[$counter]; 
-	?><br /><?
-}
-	?>
-<? endif; ?>
 </div>
 </div>
 	

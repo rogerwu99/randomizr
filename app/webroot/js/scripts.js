@@ -1,5 +1,5 @@
 function change(tab_number){
-	for (i=1;i<4;i++){
+	for (i=1;i<5;i++){
 		tab_name = 'step_'+i;
 		tab = document.getElementById(tab_name);
 		tab.style.display="none";

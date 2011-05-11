@@ -20,45 +20,38 @@ with <? echo $other_user['User']['screen_name']; ?>
 <? echo $html->image($other_user['User']['path'], array('alt'=>'Profile Pic', 'width'=>'50', 'height'=>'50', 'border'=>'0')); ?> 
 <? echo $html->image($user['User']['path'], array('alt'=>'Profile Pic', 'width'=>'50', 'height'=>'50', 'border'=>'0')); ?> 
 <div class="lightbox_content_user_block_2">
-<? echo $user['Userprofile']['first_name'].' '.$user['Userprofile']['last_name'].'\'s DNA Summary' ?>
+<? echo $user['Userprofile']['first_name'].' '.$user['Userprofile']['last_name'].' and '.$other_user['Userprofile']['first_name'].' '.$other_user['Userprofile']['last_name']; ?>
 <? 	if($user['Userprofile']['gender']=='male'): 
 		$gender_span = 'male_icon';
 	else:
 		$gender_span = 'female_icon'; 
 	endif;
 ?>
-<div><? echo $score; ?>
+<div>Your Match Score: <? echo $score; ?><br />
+Hometown: <? echo $distance; ?><br />
+Astrology: <? echo $astrology; ?> <br />
+Personal Information: <? echo $personal; ?><br />
+School Distance: <? echo $edu_distance; ?><Br />
+Education Institution: <? echo 	$education; ?><br />
+Level of Education: <? echo $bachelor; ?>
+<? echo $master; ?>
+<? echo $doctor; ?>
 
-<div class="<? echo $gender_span; ?>"></div>
-<div align='right' style="margin-left:40px; margin-top:-55px;"><? echo 'Status: '.($user['Userprofile']['relationship']).'<br>'; ?>
-<? echo 'Sign: '.$zodiac.'<br>'; ?>
 
-<? echo 'Politics: '.($user['Userprofile']['politics']).'<br>'; ?>
-<? echo 'Religion: '.($user['Userprofile']['religion']).'<br>'; ?>
-<? echo 'Hometown: '.($user['Userprofile']['hometown']).'<br>'; ?>
-	
+
+Work: <? echo $work; ?><br />
+			
+			
+		
+
 <? $degree_string = ''; ?>
-<? $degree_string .= ($bach_degree) ? 'BS' : '' ; ?>
-<? $degree_string .=($master_degree) ? '/ MS' : ''; ?>
-<? $degree_string .= ($doctor_degree) ? '/ PhD' : ''; ?>
+<? $degree_string .= ($bachelor) ? 'BS' : '' ; ?>
+<? $degree_string .=($master) ? '/ MS' : ''; ?>
+<? $degree_string .= ($doctor) ? '/ PhD' : ''; ?>
 <? echo 'Education: '.$degree_string.'<br>'; ?>
 <? echo 'Studied: '; ?>
-<? $limit = sizeof($areas_of_focus); ?>
-<? for ($counter=0;$counter<$limit;$counter++){ 
-	 echo array_shift($areas_of_focus).' '; 
-}?>
-<br />
-<? echo 'Institution: '; ?>
-<? $limit = sizeof($schools); ?>
-<? for ($counter=0;$counter<$limit;$counter++){ 
-	 echo array_shift($schools).' '; 
-}?>
+<? echo $majors; ?>
 
-<br />
-Currently: <? echo $titles; ?>
-<br />In the:  <?  echo $industries; ?> industry.<br />
-Most experience in the 
- <? echo array_shift($top_industries); ?> industry. <br />
 
 Others see you as:<br />
 <? for ($counter=0;$counter<5;$counter++){

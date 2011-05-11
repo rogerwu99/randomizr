@@ -8,7 +8,7 @@ class UsersController extends AppController {
 	var $name = 'Users';
 	var $helpers = array('Html', 'Form', 'Ajax');
 	var $components = array('Auth', 'Email','Paypal','Session');
-	var $uses = array('User', 'Mail', 'Movie', 'Interest','Place','Work','School','Userprofile');
+	var $uses = array('User', 'Mail', 'Movie', 'Interest','Place','Work','School','Userprofile','Wlookup','Twitter');
 	var $stop_words = array('/\b[a-zA-Z0-9]\b/','/[\&\'\/\:\-\!\;\(\)]/','/[\^\$\.\|\?\*\+]/','/\ba\b/','/\bI\b/','/\b(?i)able\b/','/\b(?i)about\b/','/\b(?i)above\b/','/\b(?i)abroad\b/','/\b(?i)according\b/','/\b(?i)accordingly\b/','/\b(?i)across\b/','/\b(?i)actually\b/','/\b(?i)adj\b/','/\b(?i)after\b/','/\b(?i)afterwards\b/','/\b(?i)again\b/','/\b(?i)against\b/','/\b(?i)ago\b/','/\b(?i)ahead\b/','/\b(?i)ain\'t\b/','/\b(?i)all\b/','/\b(?i)allow\b/','/\b(?i)allows\b/','/\b(?i)almost\b/','/\b(?i)alone\b/','/\b(?i)along\b/','/\b(?i)alongside\b/','/\b(?i)already\b/','/\b(?i)also\b/','/\b(?i)although\b/','/\b(?i)always\b/','/\b(?i)am\b/','/\b(?i)amid\b/','/\b(?i)amidst\b/','/\b(?i)among\b/','/\b(?i)amongst\b/','/\b(?i)an\b/','/\b(?i)and\b/','/\b(?i)another\b/','/\b(?i)any\b/','/\b(?i)anybody\b/','/\b(?i)anyhow\b/','/\b(?i)anyone\b/','/\b(?i)anything\b/','/\b(?i)anyway\b/','/\b(?i)anyways\b/','/\b(?i)anywhere\b/','/\b(?i)apart\b/','/\b(?i)appear\b/','/\b(?i)appreciate\b/','/\b(?i)appropriate\b/','/\b(?i)are\b/','/\b(?i)aren\'t\b/','/\b(?i)around\b/','/\b(?i)as\b/','/\b(?i)a\'s\b/','/\b(?i)aside\b/','/\b(?i)ask\b/','/\b(?i)asking\b/','/\b(?i)associated\b/','/\b(?i)at\b/','/\b(?i)available\b/','/\b(?i)away\b/','/\b(?i)awfully\b/','/\b(?i)back\b/','/\b(?i)backward\b/','/\b(?i)backwards\b/','/\b(?i)be\b/','/\b(?i)became\b/','/\b(?i)because\b/','/\b(?i)become\b/','/\b(?i)becomes\b/','/\b(?i)becoming\b/','/\b(?i)been\b/','/\b(?i)before\b/','/\b(?i)beforehand\b/','/\b(?i)begin\b/','/\b(?i)behind\b/','/\b(?i)being\b/','/\b(?i)believe\b/','/\b(?i)below\b/','/\b(?i)beside\b/','/\b(?i)besides\b/','/\b(?i)best\b/','/\b(?i)better\b/','/\b(?i)between\b/','/\b(?i)beyond\b/','/\b(?i)both\b/','/\b(?i)brief\b/','/\b(?i)but\b/','/\b(?i)by\b/','/\b(?i)came\b/','/\b(?i)can\b/','/\b(?i)cannot\b/','/\b(?i)cant\b/','/\b(?i)can\'t\b/','/\b(?i)caption\b/','/\b(?i)cause\b/','/\b(?i)causes\b/','/\b(?i)certain\b/','/\b(?i)certainly\b/','/\b(?i)changes\b/','/\b(?i)clearly\b/','/\b(?i)c\'mon\b/','/\b(?i)co\b/','/\b(?i)co.\b/','/\b(?i)com\b/','/\b(?i)come\b/','/\b(?i)comes\b/','/\b(?i)concerning\b/','/\b(?i)consequently\b/','/\b(?i)consider\b/','/\b(?i)considering\b/','/\b(?i)contain\b/','/\b(?i)containing\b/','/\b(?i)contains\b/','/\b(?i)corresponding\b/','/\b(?i)could\b/','/\b(?i)couldn\'t\b/','/\b(?i)course\b/','/\b(?i)c\'s\b/','/\b(?i)currently\b/','/\b(?i)dare\b/','/\b(?i)daren\'t\b/','/\b(?i)definitely\b/','/\b(?i)described\b/','/\b(?i)despite\b/','/\b(?i)did\b/','/\b(?i)didn\'t\b/','/\b(?i)different\b/','/\b(?i)directly\b/','/\b(?i)do\b/','/\b(?i)does\b/','/\b(?i)doesn\'t\b/','/\b(?i)doing\b/','/\b(?i)done\b/','/\b(?i)don\'t\b/','/\b(?i)down\b/','/\b(?i)downwards\b/','/\b(?i)during\b/','/\b(?i)each\b/','/\b(?i)edu\b/','/\b(?i)eg\b/','/\b(?i)eight\b/','/\b(?i)eighty\b/','/\b(?i)either\b/','/\b(?i)else\b/','/\b(?i)elsewhere\b/','/\b(?i)end\b/','/\b(?i)ending\b/','/\b(?i)enough\b/','/\b(?i)entirely\b/','/\b(?i)especially\b/','/\b(?i)et\b/','/\b(?i)etc\b/','/\b(?i)even\b/','/\b(?i)ever\b/','/\b(?i)evermore\b/','/\b(?i)every\b/','/\b(?i)everybody\b/','/\b(?i)everyone\b/','/\b(?i)everything\b/','/\b(?i)everywhere\b/','/\b(?i)ex\b/','/\b(?i)exactly\b/','/\b(?i)example\b/','/\b(?i)except\b/','/\b(?i)fairly\b/','/\b(?i)far\b/','/\b(?i)farther\b/','/\b(?i)few\b/','/\b(?i)fewer\b/','/\b(?i)fifth\b/','/\b(?i)first\b/','/\b(?i)five\b/','/\b(?i)followed\b/','/\b(?i)following\b/','/\b(?i)follows\b/','/\b(?i)for\b/','/\b(?i)forever\b/','/\b(?i)former\b/','/\b(?i)formerly\b/','/\b(?i)forth\b/','/\b(?i)forward\b/','/\b(?i)found\b/','/\b(?i)four\b/','/\b(?i)from\b/','/\b(?i)further\b/','/\b(?i)furthermore\b/','/\b(?i)get\b/','/\b(?i)gets\b/','/\b(?i)getting\b/','/\b(?i)given\b/','/\b(?i)gives\b/','/\b(?i)go\b/','/\b(?i)goes\b/','/\b(?i)going\b/','/\b(?i)gone\b/','/\b(?i)got\b/','/\b(?i)gotten\b/','/\b(?i)greetings\b/','/\b(?i)had\b/','/\b(?i)hadn\'t\b/','/\b(?i)half\b/','/\b(?i)happens\b/','/\b(?i)hardly\b/','/\b(?i)has\b/','/\b(?i)hasn\'t\b/','/\b(?i)have\b/','/\b(?i)haven\'t\b/','/\b(?i)having\b/','/\b(?i)he\b/','/\b(?i)he\'d\b/','/\b(?i)he\'ll\b/','/\b(?i)hello\b/','/\b(?i)help\b/','/\b(?i)hence\b/','/\b(?i)her\b/','/\b(?i)here\b/','/\b(?i)hereafter\b/','/\b(?i)hereby\b/','/\b(?i)herein\b/','/\b(?i)here\'s\b/','/\b(?i)hereupon\b/','/\b(?i)hers\b/','/\b(?i)herself\b/','/\b(?i)he\'s\b/','/\b(?i)hi\b/','/\b(?i)him\b/','/\b(?i)himself\b/','/\b(?i)his\b/','/\b(?i)hither\b/','/\b(?i)hopefully\b/','/\b(?i)how\b/','/\b(?i)howbeit\b/','/\b(?i)however\b/','/\b(?i)hundred\b/','/\b(?i)i\'d\b/','/\b(?i)ie\b/','/\b(?i)if\b/','/\b(?i)ignored\b/','/\b(?i)i\'ll\b/','/\b(?i)i\'m\b/','/\b(?i)immediate\b/','/\b(?i)in\b/','/\b(?i)inasmuch\b/','/\b(?i)inc\b/','/\b(?i)inc.\b/','/\b(?i)indeed\b/','/\b(?i)indicate\b/','/\b(?i)indicated\b/','/\b(?i)indicates\b/','/\b(?i)inner\b/','/\b(?i)inside\b/','/\b(?i)insofar\b/','/\b(?i)instead\b/','/\b(?i)into\b/','/\b(?i)inward\b/','/\b(?i)is\b/','/\b(?i)isn\'t\b/','/\b(?i)it\b/','/\b(?i)it\'d\b/','/\b(?i)it\'ll\b/','/\b(?i)its\b/','/\b(?i)it\'s\b/','/\b(?i)itself\b/','/\b(?i)i\'ve\b/','/\b(?i)just\b/','/\b(?i)k\b/','/\b(?i)keep\b/','/\b(?i)keeps\b/','/\b(?i)kept\b/','/\b(?i)know\b/','/\b(?i)known\b/','/\b(?i)knows\b/','/\b(?i)last\b/','/\b(?i)lately\b/','/\b(?i)later\b/','/\b(?i)latter\b/','/\b(?i)latterly\b/','/\b(?i)least\b/','/\b(?i)less\b/','/\b(?i)lest\b/','/\b(?i)let\b/','/\b(?i)let\'s\b/','/\b(?i)like\b/','/\b(?i)liked\b/','/\b(?i)likely\b/','/\b(?i)likewise\b/','/\b(?i)little\b/','/\b(?i)look\b/','/\b(?i)looking\b/','/\b(?i)looks\b/','/\b(?i)low\b/','/\b(?i)lower\b/','/\b(?i)ltd\b/','/\b(?i)made\b/','/\b(?i)mainly\b/','/\b(?i)make\b/','/\b(?i)makes\b/','/\b(?i)many\b/','/\b(?i)may\b/','/\b(?i)maybe\b/','/\b(?i)mayn\'t\b/','/\b(?i)me\b/','/\b(?i)mean\b/','/\b(?i)meantime\b/','/\b(?i)meanwhile\b/','/\b(?i)merely\b/','/\b(?i)might\b/','/\b(?i)mightn\'t\b/','/\b(?i)mine\b/','/\b(?i)minus\b/','/\b(?i)miss\b/','/\b(?i)more\b/','/\b(?i)moreover\b/','/\b(?i)most\b/','/\b(?i)mostly\b/','/\b(?i)mr\b/','/\b(?i)mrs\b/','/\b(?i)much\b/','/\b(?i)must\b/','/\b(?i)mustn\'t\b/','/\b(?i)my\b/','/\b(?i)myself\b/','/\b(?i)name\b/','/\b(?i)namely\b/','/\b(?i)nd\b/','/\b(?i)near\b/','/\b(?i)nearly\b/','/\b(?i)necessary\b/','/\b(?i)need\b/','/\b(?i)needn\'t\b/','/\b(?i)needs\b/','/\b(?i)neither\b/','/\b(?i)never\b/','/\b(?i)neverf\b/','/\b(?i)neverless\b/','/\b(?i)nevertheless\b/','/\b(?i)new\b/','/\b(?i)next\b/','/\b(?i)nine\b/','/\b(?i)ninety\b/','/\b(?i)no\b/','/\b(?i)nobody\b/','/\b(?i)non\b/','/\b(?i)none\b/','/\b(?i)nonetheless\b/','/\b(?i)noone\b/','/\b(?i)no-one\b/','/\b(?i)nor\b/','/\b(?i)normally\b/','/\b(?i)not\b/','/\b(?i)nothing\b/','/\b(?i)notwithstanding\b/','/\b(?i)novel\b/','/\b(?i)now\b/','/\b(?i)nowhere\b/','/\b(?i)obviously\b/','/\b(?i)of\b/','/\b(?i)off\b/','/\b(?i)often\b/','/\b(?i)oh\b/','/\b(?i)ok\b/','/\b(?i)okay\b/','/\b(?i)old\b/','/\b(?i)on\b/','/\b(?i)once\b/','/\b(?i)one\b/','/\b(?i)ones\b/','/\b(?i)one\'s\b/','/\b(?i)only\b/','/\b(?i)onto\b/','/\b(?i)opposite\b/','/\b(?i)or\b/','/\b(?i)other\b/','/\b(?i)others\b/','/\b(?i)otherwise\b/','/\b(?i)ought\b/','/\b(?i)oughtn\'t\b/','/\b(?i)our\b/','/\b(?i)ours\b/','/\b(?i)ourselves\b/','/\b(?i)out\b/','/\b(?i)outside\b/','/\b(?i)over\b/','/\b(?i)overall\b/','/\b(?i)own\b/','/\b(?i)particular\b/','/\b(?i)particularly\b/','/\b(?i)past\b/','/\b(?i)per\b/','/\b(?i)perhaps\b/','/\b(?i)placed\b/','/\b(?i)please\b/','/\b(?i)plus\b/','/\b(?i)possible\b/','/\b(?i)presumably\b/','/\b(?i)probably\b/','/\b(?i)provided\b/','/\b(?i)provides\b/','/\b(?i)que\b/','/\b(?i)quite\b/','/\b(?i)qv\b/','/\b(?i)rather\b/','/\b(?i)rd\b/','/\b(?i)re\b/','/\b(?i)really\b/','/\b(?i)reasonably\b/','/\b(?i)recent\b/','/\b(?i)recently\b/','/\b(?i)regarding\b/','/\b(?i)regardless\b/','/\b(?i)regards\b/','/\b(?i)relatively\b/','/\b(?i)respectively\b/','/\b(?i)right\b/','/\b(?i)round\b/','/\b(?i)said\b/','/\b(?i)same\b/','/\b(?i)saw\b/','/\b(?i)say\b/','/\b(?i)saying\b/','/\b(?i)says\b/','/\b(?i)second\b/','/\b(?i)secondly\b/','/\b(?i)see\b/','/\b(?i)seeing\b/','/\b(?i)seem\b/','/\b(?i)seemed\b/','/\b(?i)seeming\b/','/\b(?i)seems\b/','/\b(?i)seen\b/','/\b(?i)self\b/','/\b(?i)selves\b/','/\b(?i)sensible\b/','/\b(?i)sent\b/','/\b(?i)serious\b/','/\b(?i)seriously\b/','/\b(?i)seven\b/','/\b(?i)several\b/','/\b(?i)shall\b/','/\b(?i)shan\'t\b/','/\b(?i)she\b/','/\b(?i)she\'d\b/','/\b(?i)she\'ll\b/','/\b(?i)she\'s\b/','/\b(?i)should\b/','/\b(?i)shouldn\'t\b/','/\b(?i)since\b/','/\b(?i)six\b/','/\b(?i)so\b/','/\b(?i)some\b/','/\b(?i)somebody\b/','/\b(?i)someday\b/','/\b(?i)somehow\b/','/\b(?i)someone\b/','/\b(?i)something\b/','/\b(?i)sometime\b/','/\b(?i)sometimes\b/','/\b(?i)somewhat\b/','/\b(?i)somewhere\b/','/\b(?i)soon\b/','/\b(?i)sorry\b/','/\b(?i)specified\b/','/\b(?i)specify\b/','/\b(?i)specifying\b/','/\b(?i)still\b/','/\b(?i)sub\b/','/\b(?i)such\b/','/\b(?i)sup\b/','/\b(?i)sure\b/','/\b(?i)take\b/','/\b(?i)taken\b/','/\b(?i)taking\b/','/\b(?i)tell\b/','/\b(?i)tends\b/','/\b(?i)th\b/','/\b(?i)than\b/','/\b(?i)thank\b/','/\b(?i)thanks\b/','/\b(?i)thanx\b/','/\b(?i)that\b/','/\b(?i)that\'ll\b/','/\b(?i)thats\b/','/\b(?i)that\'s\b/','/\b(?i)that\'ve\b/','/\b(?i)the\b/','/\b(?i)their\b/','/\b(?i)theirs\b/','/\b(?i)them\b/','/\b(?i)themselves\b/','/\b(?i)then\b/','/\b(?i)thence\b/','/\b(?i)there\b/','/\b(?i)thereafter\b/','/\b(?i)thereby\b/','/\b(?i)there\'d\b/','/\b(?i)therefore\b/','/\b(?i)therein\b/','/\b(?i)there\'ll\b/','/\b(?i)there\'re\b/','/\b(?i)theres\b/','/\b(?i)there\'s\b/','/\b(?i)thereupon\b/','/\b(?i)there\'ve\b/','/\b(?i)these\b/','/\b(?i)they\b/','/\b(?i)they\'d\b/','/\b(?i)they\'ll\b/','/\b(?i)they\'re\b/','/\b(?i)they\'ve\b/','/\b(?i)thing\b/','/\b(?i)things\b/','/\b(?i)think\b/','/\b(?i)third\b/','/\b(?i)thirty\b/','/\b(?i)this\b/','/\b(?i)thorough\b/','/\b(?i)thoroughly\b/','/\b(?i)those\b/','/\b(?i)though\b/','/\b(?i)three\b/','/\b(?i)through\b/','/\b(?i)throughout\b/','/\b(?i)thru\b/','/\b(?i)thus\b/','/\b(?i)till\b/','/\b(?i)to\b/','/\b(?i)together\b/','/\b(?i)too\b/','/\b(?i)took\b/','/\b(?i)toward\b/','/\b(?i)towards\b/','/\b(?i)tried\b/','/\b(?i)tries\b/','/\b(?i)truly\b/','/\b(?i)try\b/','/\b(?i)trying\b/','/\b(?i)t\'s\b/','/\b(?i)twice\b/','/\b(?i)two\b/','/\b(?i)un\b/','/\b(?i)under\b/','/\b(?i)underneath\b/','/\b(?i)undoing\b/','/\b(?i)unfortunately\b/','/\b(?i)unless\b/','/\b(?i)unlike\b/','/\b(?i)unlikely\b/','/\b(?i)until\b/','/\b(?i)unto\b/','/\b(?i)up\b/','/\b(?i)upon\b/','/\b(?i)upwards\b/','/\b(?i)us\b/','/\b(?i)use\b/','/\b(?i)used\b/','/\b(?i)useful\b/','/\b(?i)uses\b/','/\b(?i)using\b/','/\b(?i)usually\b/','/\b(?i)v\b/','/\b(?i)value\b/','/\b(?i)various\b/','/\b(?i)versus\b/','/\b(?i)very\b/','/\b(?i)via\b/','/\b(?i)viz\b/','/\b(?i)vs\b/','/\b(?i)want\b/','/\b(?i)wants\b/','/\b(?i)was\b/','/\b(?i)wasn\'t\b/','/\b(?i)way\b/','/\b(?i)we\b/','/\b(?i)we\'d\b/','/\b(?i)welcome\b/','/\b(?i)well\b/','/\b(?i)we\'ll\b/','/\b(?i)went\b/','/\b(?i)were\b/','/\b(?i)we\'re\b/','/\b(?i)weren\'t\b/','/\b(?i)we\'ve\b/','/\b(?i)what\b/','/\b(?i)whatever\b/','/\b(?i)what\'ll\b/','/\b(?i)what\'s\b/','/\b(?i)what\'ve\b/','/\b(?i)when\b/','/\b(?i)whence\b/','/\b(?i)whenever\b/','/\b(?i)where\b/','/\b(?i)whereafter\b/','/\b(?i)whereas\b/','/\b(?i)whereby\b/','/\b(?i)wherein\b/','/\b(?i)where\'s\b/','/\b(?i)whereupon\b/','/\b(?i)wherever\b/','/\b(?i)whether\b/','/\b(?i)which\b/','/\b(?i)whichever\b/','/\b(?i)while\b/','/\b(?i)whilst\b/','/\b(?i)whither\b/','/\b(?i)who\b/','/\b(?i)who\'d\b/','/\b(?i)whoever\b/','/\b(?i)whole\b/','/\b(?i)who\'ll\b/','/\b(?i)whom\b/','/\b(?i)whomever\b/','/\b(?i)who\'s\b/','/\b(?i)whose\b/','/\b(?i)why\b/','/\b(?i)will\b/','/\b(?i)willing\b/','/\b(?i)wish\b/','/\b(?i)with\b/','/\b(?i)within\b/','/\b(?i)without\b/','/\b(?i)wonder\b/','/\b(?i)won\'t\b/','/\b(?i)would\b/','/\b(?i)wouldn\'t\b/','/\b(?i)yes\b/','/\b(?i)yet\b/','/\b(?i)you\b/','/\b(?i)you\'d\b/','/\b(?i)you\'ll\b/','/\b(?i)your\b/','/\b(?i)you\'re\b/','/\b(?i)yours\b/','/\b(?i)yourself\b/','/\b(?i)yourselves\b/','/\b(?i)you\'ve\b/','/\b(?i)zero\b/');
 
 	function index()
@@ -274,7 +274,52 @@ class UsersController extends AppController {
 		$this->redirect(array('action'=>'view_my_profile'));
 	}*/
 	
+	function populate_twitter_cats(){
+		
+		$user =  $this->User->find('first', array('conditions' => (array('User.id'=>$this->Auth->getUserId()))));
+
+		$consumer = $this->createConsumer('twitter');
+		$content=$consumer->get($user['twitter_access_key'],$user['twitter_access_secret'],'http://api.twitter.com/1/users/suggestions.json?lang=en', array());
+		
+	//$list = simplexml_load_string($content);
+
+		
+	//	$list = json_decode(file_get_contents('http://api.twitter.com/1/users/suggestions.json'));
+		//	$list = simplexml_load_string('http://google.com/');
+		
+		$list = json_decode($content);
+		for ($counter =0;$counter<sizeof($list);$counter++){
+			
+			
+			//echo $list[$counter]->slug.'<br>';
+			
+			$content=$consumer->get($user['twitter_access_key'],$user['twitter_access_secret'],'http://api.twitter.com/1/users/suggestions/'.$list[$counter]->slug.'.json?lang=en', array());
+			$members = json_decode($content);
+			$cat[$counter]->topic = $list[$counter]->slug;
+			$cat[$counter]->cloud = $this->scrub_interests(array(),$members->users);
+			foreach ($cat[$counter]->cloud as $key=>$value){
+				if ($value == 1 || $key == 'twitter' || preg_match('/^tweet*/',$key)) unset($cat[$counter]->cloud[$key]);
+			}
+			$this->Twitter->create();
+			$this->data['Twitter']['category']=$cat[$counter]->topic;
+			$this->data['Twitter']['body']=json_encode($cat[$counter]->cloud);
+			$this->Twitter->set($this->data);
+			$this->Twitter->save();
+//			var_dump($cat[$counter]);	
+		}
+		
+	//echo $list.' list';	
+		//$tw_user = simplexml_load_string($list);
+		
+		
+		//var_dump($list);
+		
+		
+		$this->redirect(array('action'=>'view_my_profile'));
 	
+	
+	
+	}
 	
 	
 	
@@ -316,12 +361,12 @@ class UsersController extends AppController {
 			case 'linkedin':
 				list($work,$education) = $this->getLinkedInData();
 				
-				$industries = (!empty($db_results['Work']['industries'])) ? $db_results['Work']['industries'] : array();
-				$titles = (!empty($db_results['Work']['titles'])) ? $db_results['Work']['titles']: array(); 
+				$industries = (!empty($db_results['Work']['industries'])) ? json_decode($db_results['Work']['industries'],true) : array();
+				$titles = (!empty($db_results['Work']['titles'])) ? json_decode($db_results['Work']['titles'],true) : array(); 
 				
 				list ($titles,$industries) = $this->scrub_work($titles, $industries, $work);
 				if (!empty($db_results['School']['body'])){
-					$this->data['School']['body']=json_encode($education).$db_results['School']['body'];
+					$this->data['School']['body']=json_encode($education);   // see below //.$db_results['School']['body'];
 					$this->School->read(null,$db_results['School']['id']);
 				}
 				else {
@@ -333,7 +378,7 @@ class UsersController extends AppController {
 				$this->School->save();
 			
 				if (!empty($db_results['Work']['body'])){
-					$this->data['Work']['body']=json_encode($work).$db_results['Work']['body'];
+					$this->data['Work']['body']=json_encode($work);   //   we need to find a way to add this without adding in dupes  //.$db_results['Work']['body'];
 					$this->Work->read(null,$db_results['Work']['id']);
 				}
 				else {
@@ -447,7 +492,10 @@ class UsersController extends AppController {
 					$this->Interest->create();
 				}
 				$rep_followers = $this->getRepresentativeFollowers($tag_cloud,$user_list,$following);
-				var_dump($rep_followers);
+			//	var_dump($rep_followers);
+			
+			
+			
 				$you = $this->scrub_interests(array(),$lists_members);
 				$this->data['Interest']['you_body']=json_encode($you);
 				$this->data['Interest']['body']=json_encode($tag_cloud);
@@ -471,7 +519,80 @@ class UsersController extends AppController {
 			
 				break;
 		}
+			if ($this->Session->check('register') && $this->Session->read('register')=='true'){
+			$this->redirect(array('action'=>'register/2'));
+		}
+		else {
+			$this->redirect(array('action'=>'view_my_profile'));
+		}
+	}
+	function getCategories($tag_cloud){
+		$cats = $this->Twitter->find('all');
+		$user = $this->User->find('first', array('conditions' => (array('User.id'=>$this->Auth->getUserId()))));
+		$interests = json_decode($user['Interest']['body'],true);
+		$about_me = json_decode($user['Interest']['you_body'],true);
+		//echo 'Total Interests Value: '. array_sum($interests).'<br>';
+		for ($counter =0;$counter<sizeof($cats);$counter++){
+			$category = $cats[$counter]['Twitter']['category'];
+			$description = json_decode($cats[$counter]['Twitter']['body'], true);
+			// at some point use array_intersect_ukey()
+			
+			$vars = array_intersect_key($interests, $description);
+			$vars1 = array_intersect_key($description,$interests);
+			
+			//echo $category.' <Br>';
+			//echo 'Total Value of Category: '.array_sum($description).'<br>';
+			//var_dump($vars);
+			//echo '<br>';
+			//var_dump($vars1);
+			$percent1 = sprintf('%01.2f',(string)array_sum($vars)/array_sum($interests));
+			$percent2 = sprintf('%01.2f',(string)array_sum($vars1)/array_sum($description));
+			//echo "Percent 1: ".$percent1;
+			//echo "<br> Percent 2: ".$percent2.'<br>';
+	//		echo "Sum: ".(2*$percent1+$percent2).'<br>';
+		//	$percent = sizeof($vars)/sizeof($description);
+			$value = 2*$percent1+$percent2;
 		
+			$your_interests[$counter]->category = $category;
+		//	$your_interests[$counter]->percent = $percent;
+			$your_interests[$counter]->value = $value;
+			
+			$my_vars = array_intersect_key($about_me, $description);
+			$my_vars1 = array_intersect_key($description, $about_me);
+			
+			$my_percent = sprintf('%01.2f',(string)array_sum($my_vars)/array_sum($about_me));
+			$my_percent1 = sprintf('%01.2f',(string)array_sum($my_vars1)/array_sum($description)); 
+			
+			$my_value = 2*$my_percent+$my_percent1;
+			
+			$aboutme[$counter]->category = $category;
+		//	$aboutme[$counter]->percent = $my_percent;
+			$aboutme[$counter]->value = $my_value;
+		}
+		//echo 'Aspirations'.'<br>';
+		
+		usort($your_interests, array(&$this, "cat_sort"));
+		usort($aboutme, array(&$this, "cat_sort"));
+		
+		return array($your_interests,$aboutme);
+
+	
+	}
+	function pchart($id1,$id2, $id3,$id4,$id5,$label1,$label2,$label3,$label4,$label5,$title){
+		
+		$datay=array($id1,$id2,$id3,$id4,$id5);
+		$label=array($label1,$label2,$label3,$label4,$label5);
+		$this->set('datay',$datay);
+		$this->set('label',$label);
+		$this->set('title',$title);
+		
+		$this->layout='';
+	}
+	
+	function cat_sort($a, $b){
+		if ($a->value > $b->value) return -1;
+		elseif ($a->value == $b->value) return 0;
+		else return 1;
 	}
 	function store_master_data($master){
 		$user = $this->Auth->getUserInfo();
@@ -816,7 +937,7 @@ $db_results = $this->User->find('first', array('conditions' => (array('User.id'=
 		$content_li=$consumer_li->get($accessToken->key,$accessToken->secret,'http://api.linkedin.com/v1/people/~:(id,first-name,last-name,headline,location,date-of-birth,positions,industry,educations,picture-url,summary,specialties,associations,honors,interests,publications,patents,languages,skills,certifications)', array());
 		$li_user = simplexml_load_string($content_li);
 		
-	
+//	var_dump($li_user);
 		
 		
 		
@@ -1097,7 +1218,7 @@ $db_results = $this->User->find('first', array('conditions' => (array('User.id'=
 			if (!empty($db_results['Place']['categories'])){
 				$categories = json_decode($db_results['Place']['categories']);
 				$top_categories = array();
-				var_dump($db_results['Place']['categories']);
+				//var_dump($db_results['Place']['categories']);
 				foreach ($categories as $key=>$value){
 					array_push($top_categories,$key);
 				}
@@ -1143,7 +1264,7 @@ $db_results = $this->User->find('first', array('conditions' => (array('User.id'=
 				
 			}
 			if (!empty($db_results['School']['body'])){
-				$school = json_decode($db_results['School']['body']);
+				$school = json_decode($db_results['School']['body'],true);
 				$parsable_array = array();
 				$schools =array();
 				$areas_of_focus = array();
@@ -1173,6 +1294,11 @@ $db_results = $this->User->find('first', array('conditions' => (array('User.id'=
 				
 			}
 		
+			list($your_interests,$aboutme) = $this->getCategories($db_results['Interest']['body']);
+			
+			$this->set('your_interests',$your_interests);
+			$this->set(compact('aboutme'));
+
 			
 			
 	
@@ -1897,7 +2023,8 @@ $db_results = $this->User->find('first', array('conditions' => (array('User.id'=
 			
 			
 //			var_dump($other_user['Interest']);
-			
+			$astrology = 0;
+			$personal = 0;
 			
 			if (!is_null($user['Userprofile']['id']) && !is_null($other_user['Userprofile']['id'])){
 				// check difference in birthday
@@ -1911,30 +2038,40 @@ $db_results = $this->User->find('first', array('conditions' => (array('User.id'=
 				$days = floor(($diff - $years * 365*60*60*24 - $months*30*60*60*24)/ (60*60*24));
 				
 				if ($months == 0 && $days < 10) {
+					$astrology += 10;
 					$score += 5;
 				}
 				elseif ($month > 1 && $month < 3) {
+					$astrology += 5;
 					$score+=2;
 				}
 				if ($years < 10){
 					$score++;
 				}
 				if ($user_sign == $other_user_sign){
+					$astrology += 10;
 					$score += 3;
 				}
 			
 				if ($user['Userprofile']['gender']==$other_user['Userprofile']['gender']){
 					$score++;
+					$personal++;
 				}
 				similar_text($user['Userprofile']['relationship'],$other_user['Userprofile']['relationship'],$r_match);
-				if ($r_match > 50) $score++;	
-							
+				if ($r_match > 50) {
+					$personal++;
+					$score++;	
+				}
 				similar_text($user['Userprofile']['religion'],$other_user['Userprofile']['religion'],$re_match);
-				if ($re_match > 50) $score+=2;			
-	
+				if ($re_match > 50) {
+					$personal += 2;
+					$score+=2;			
+				}
 				similar_text($user['Userprofile']['political'],$other_user['Userprofile']['political'],$p_match);
-				if ($p_match > 50) $score+=3;			
-				
+				if ($p_match > 50) {
+					$personal += 3;
+					$score+=3;			
+				}
 				
 				if (!is_null($user['Userprofile']['hometown']) && !is_null($other_user['Userprofile']['hometown'])){
 					
@@ -1964,18 +2101,32 @@ $db_results = $this->User->find('first', array('conditions' => (array('User.id'=
 					
 					$d_miles = $distance * 0.621371192;
 	
-					if ($d_miles < 1) $score += 20;
-					elseif ($d_miles < 10) $score += 16;
-					elseif ($d_miles < 25) $score += 12;
-					elseif ($d_miles < 50) $score += 10;
-					elseif ($d_miles < 100) $score += 7;
-					elseif ($d_miles < 150) $score += 3;
-					elseif ($d_miles < 200) $score++;
-	
-	
+					if ($d_miles < 1) {
+						$score += 20;
+					}
+					elseif ($d_miles < 10) {
+						$score += 16;
+					}
+					elseif ($d_miles < 25) {
+						$score += 12;
+					}
+					elseif ($d_miles < 50) {
+						$score += 10;
+					}
+					elseif ($d_miles < 100) {
+						$score += 7;
+					}
+					elseif ($d_miles < 150) {
+						$score += 3;
+					}
+					elseif ($d_miles < 200) {
+						$score++;
+					}
+					$this->set('distance',$d_miles);
 				}
 			}
-			
+			$this->set('astrology',$astrology);
+			$this->set('personal',$personal);
 			
 			if (!is_null($user['Interest']['id']) && !is_null($other_user['Interest']['id'])){
 				
@@ -2037,10 +2188,89 @@ $db_results = $this->User->find('first', array('conditions' => (array('User.id'=
 				$my_schools = json_decode($user['School']['body'],true);
 				$your_schools = json_decode($other_user['School']['body'],true);
 				$earth_radius = 6371;
+				$education = 0;
+				
+				
+			
+				
+				$doctor_array = array('/\b(?i)phd*\b/','/\bdoctor*\b/');
+				$master_array = array('/\bMS\b/','/\b(?i)master*/');
+				$bach_array = array('/\b(?i)bachelor*\b/','/\bBS\b/');
+				
+				for ($counter = 0;$counter<sizeof($my_schools);$counter++){
+					if (isset($my_schools[$counter]['degree'])){
+						preg_replace($doctor_array,'',$my_schools[$counter]['degree'],-1,$doctor);
+						if ($doctor>0) $my_doctor_degree = true;
+						preg_replace($master_array,'',$my_schools[$counter]['degree'],-1,$masters);
+						if ($masters>0) $my_master_degree = true;
+						preg_replace($bach_array,'',$my_schools[$counter]['degree'],-1,$bachelors);
+						if ($bachelors>0) $my_bach_degree = true;
+					}
+				}
+				for ($counter = 0;$counter<sizeof($your_schools);$counter++){
+					if (isset($your_schools[$counter]['degree'])){
+						preg_replace($doctor_array,'',$your_schools[$counter]['degree'],-1,$doctor);
+						if ($doctor>0) $your_doctor_degree = true;
+						preg_replace($master_array,'',$your_schools[$counter]['degree'],-1,$masters);
+						if ($masters>0) $your_master_degree = true;
+						preg_replace($bach_array,'',$your_schools[$counter]['degree'],-1,$bachelors);
+						if ($bachelors>0) $your_bach_degree = true;
+					}
+				}
+				
+				
+				if ($my_bach_degree && $your_bach_degree) $bach_degree = true;
+				if ($my_master_degree && $your_master_degree) $master_degree = true;
+				if ($my_doctor_degree && $your_doctor_degree) $doctor_degree = true;
+				
+				
+				$this->set('bachelor',$bach_degree);
+				$this->set('master',$master_degree);
+				$this->set('doctor',$doctor_degree);
+				
+				
+				$my_major = array();
+				$your_major = array();
+				// look at majors
+				for ($counter = 0;$counter<sizeof($my_schools);$counter++){
+					if (isset($my_schools[$counter]['major'])){
+						$tok = strtok($my_schools[$counter]['major']," ");
+						while ($tok !== false) {
+							array_push($my_major, $tok);
+							$tok = strtok(" ");
+						}
+	
+					}
+				}
+				for ($counter = 0;$counter<sizeof($your_schools);$counter++){
+					if (isset($your_schools[$counter]['major'])){
+						$tok = strtok($your_schools[$counter]['major']," ");
+						while ($tok !== false) {
+							array_push($your_major, $tok);
+							$tok = strtok(" ");
+						}
+					}
+				}
+				
+				$majors = 0;
+				for ($counter = 0; $counter < sizeof($my_major); $counter++){
+					for ($inner_counter = 0; $inner_counter<sizeof($your_major); $inner_counter++){
+						similar_text($my_major[$counter],$your_major[$inner_counter],$match);
+						if ($match > 50) {	
+//							var_dump($my_major[$counter]);
+	//						var_dump($your_major[$inner_counter]);
+							$score += 20;
+							$majors += 10;
+						}
+					}
+				}
+				$this->set('majors',$majors);
 				
 				for ($counter=0;$counter<sizeof($my_schools);$counter++){
 					$url = "http://where.yahooapis.com/geocode?q=".urlencode($my_schools[$counter]['school'])."&flags=J&gflags=R&appid=cENXMi4g";
 					$address = json_decode(file_get_contents($url));
+				//	echo $my_schools['counter']['school'];
+					//var_dump($address);
 					if (!$address->ResultSet->Error){
 						$my_lat[$counter] = $address->ResultSet->Results[0]->latitude;
 						$my_long[$counter] = $address->ResultSet->Results[0]->longitude;
@@ -2048,10 +2278,16 @@ $db_results = $this->User->find('first', array('conditions' => (array('User.id'=
 					
 					for ($inner_counter=0;$inner_counter<sizeof($your_schools);$inner_counter++){
 						similar_text($my_schools[$counter]['school'],$your_schools[$inner_counter]['school'],$match);
-						if ($match > 75) $score+=30;
+						if ($match > 75) {
+							$education += 10;
+							$score+=30;
+						}
 						if ($counter==0){
 							$url = "http://where.yahooapis.com/geocode?q=".urlencode($your_schools[$inner_counter]['school'])."&flags=J&gflags=R&appid=cENXMi4g";
 							$address = json_decode(file_get_contents($url));
+								//	echo $your_schools[$inner_counter]['school'];
+									//		var_dump($address);
+
 							if (!$address->ResultSet->Error){
 								$your_lat[$inner_counter] = $address->ResultSet->Results[0]->latitude;
 								$your_long[$inner_counter] = $address->ResultSet->Results[0]->longitude;
@@ -2073,19 +2309,92 @@ $db_results = $this->User->find('first', array('conditions' => (array('User.id'=
 						elseif ($d_miles < 150) $score += 3;
 						elseif ($d_miles < 200) $score++;
 						
-					
+						$this->set('edu_distance',$d_miles);
+						
 					}
 				}
-				
+				$this->set('education',$education);
 				
 			}
 			// compare works
 			if (!is_null($user['Work']['id']) && !is_null($other_user['Work']['id'])){
+				$my_industries = array();
+				$your_industries = array();
+				$work = 0;
+				$my_work = json_decode($user['Work']['body']);
+				$your_work = json_decode($other_user['Work']['body']);
+				for($counter = 0; $counter < sizeof($my_work); $counter++){
+					$cats = $this->Wlookup->find('first',array('conditions' => (array('Wlookup.description'=>$my_work[$counter]->industry))));
+					$tok = strtok($cats['Wlookup']['group']," ");
+					while ($tok !== false) {
+						array_push($my_industries, $tok);
+						$tok = strtok(" ");
+					}
+				}
+				for($counter = 0; $counter < sizeof($your_work); $counter++){
+					$cats = $this->Wlookup->find('first',array('conditions' => (array('Wlookup.description'=>$your_work[$counter]->industry))));
+					$tok = strtok($cats['Wlookup']['group']," ");
+					while ($tok !== false) {
+						array_push($your_industries, $tok);
+						$tok = strtok(" ");
+					}
+				}
 				
-				//var_dump($user['Work']['body']);
-							echo 'checking work';
+				$result = array_intersect($my_industries, $your_industries);
+				if (!empty($result)) {
+					$score += sizeof($result) * 2;
+					$work += 10;
+				}
+			
+				
+				
+				// titles
+				
+				// we need a list of titles  that are similar
+				
+				
+				for($counter = 0; $counter < sizeof($my_work); $counter++){
+					for($inner_counter = 0; $inner_counter < sizeof($your_work); $inner_counter++){
+						similar_text($my_work[$counter]->company,$your_work[$inner_counter]->company,$match);
+						if ($match > 50){
+							$work += 10;
+							$score += 10;
+						}
+						
+					}
+				}
+				
+				//companys
+				// how do we compare companies
+				
+				
+				for($counter = 0; $counter < sizeof($my_work); $counter++){
+					for($inner_counter = 0; $inner_counter < sizeof($your_work); $inner_counter++){
+						similar_text($my_work[$counter]->title,$your_work[$inner_counter]->title,$match);
+						if ($match > 50){
+							$work += 10;
+							$score += 10;
+						}
+						
+					}
+				}
+				
+				
+				
+				
+				$this->set('work',$work);
 	
-				//var_dump($other_user['Work']['body']);
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
 			}
 		
 			
@@ -2182,30 +2491,151 @@ $db_results = $this->User->find('first', array('conditions' => (array('User.id'=
 			$this->render();
 		}	
 	}
-	function edit_work($id=null,$key=null){
+	function edit_work($id=null,$key=null,$type='Work'){
 		$user = $this->User->find('first', array('conditions' => (array('User.id'=>$this->Auth->getUserId()))));
-		$work = json_decode($user['Work']['body'],true);
-		
+		//$work = json_decode($user[$type]['body'],true);
+	//	var_dump($user);
+		//echo $this->Auth->getUserId();
+//		var_dump($user['Work']['body']);
+				//var_dump($work);
+	//echo $id.' id';
+	//echo $key.' key';
+	//var_dump($this->data);
 		if (!empty($this->data)){
-			var_dump($work);
-			$work[$id][$key] = $this->data['User']['val'];
-			$this->Work->read(null,$user['Work']['id']);
-			$this->data['Work']['body'] = json_encode($work);
-			$this->Work->set($this->data);
-			$this->Work->save();
-			var_dump($this->data);
+				$id = $this->data['User']['id'];
+				$key = $this->data['User']['key'];
+				$type = $this->data['User']['type'];		
+		$work = json_decode($user[$type]['body'],true);
+				$work[$id][$key] = $this->data['User']['val'];
+		//			var_dump($work);
+			
+				if ($type=='Work'){
+					$this->Work->read(null,$user[$type]['id']);
+					$this->data[$type]['body'] = json_encode($work);
+					$this->Work->set($this->data);
+					$this->Work->save();
+				}
+				else { // must be school then
+					$this->School->read(null,$user[$type]['id']);
+					$this->data[$type]['body'] = json_encode($work);
+					$this->School->set($this->data);
+					$this->School->save();
+				}
+			
+		//	var_dump($this->data);
 			$this->set('editing',false);
-			$this->set('key',$this->data['User']['val']);
+			$this->set('value',$this->data['User']['val']);
 			$this->set('id',$id);
 			$this->set('key',$key);
+			$this->set('type',$type);
 		}
+		elseif ($key == 'delete'){
+			echo 'Data Deleted';
+			//echo $type;
+				$work = json_decode($user[$type]['body'],true);
+	
+			//echo $user['Work']['id'];
+			//echo $user[$type]['id'];
+				// delete the whole entry
+							if ($type=='Work'){
+					$this->Work->delete($user[$type]['id']);
+					//$this->data[$type]['body'] = json_encode($work);
+					//$this->Work->set($this->data);
+					//$this->Work->save();
+				}
+				else { // must be school then
+					$this->School->delete($user[$type]['id']);
+					//$this->data[$type]['body'] = json_encode($work);
+					//$this->School->set($this->data);
+					//$this->School->save();
+				}
+
+			}
 		else {
 			$this->set('value',$work[$id][$key]); 
 			$this->set('editing',true);
+				$this->set('id',$id);
+			$this->set('type',$type);
+			$this->set('key',$key);
 		}
-		$this->set('div_name','edit_'.$key.'_'.$id);
+		$this->set('div_name','edit_'.$type.'_'.$key.'_'.$id);
 		$this->render();
 	}
+		function add_work($type='Work'){
+			$user = $this->User->find('first', array('conditions' => (array('User.id'=>$this->Auth->getUserId()))));
+			
+			if (!empty($this->data)){
+	//			var_dump($this->data);
+				$type = $this->data['User']['type'];
+				$work = json_decode($user[$type]['body'],true);
+			if (sizeof($work)<1) $work = array();
+				foreach($this->data['User'] as $key=>$value){
+					if ($key != 'type'){
+						$temp[$type][$key] = $value;
+					}
+				}
+				array_push($work,$temp[$type]);
+	
+//			var_dump($work);
+				if ($type=='Work'){
+					$this->Work->read(null,$user[$type]['id']);
+					$this->data[$type]['body'] = json_encode($work);
+					$this->Work->set($this->data);
+					$this->Work->save();
+				}
+				else { // must be school then
+					$this->School->read(null,$user[$type]['id']);
+					$this->data[$type]['body'] = json_encode($work);
+					$this->School->set($this->data);
+					$this->School->save();
+				}
+			
+		//	var_dump($this->data);
+			$this->set('editing',true);
+			$this->set('value',$this->data['User']['val']);
+			$this->set('id',$id);
+			$this->set('key',$key);
+			$this->set('type',$type);
+		}
+		
+		else {
+			/*if ($type=='Work'){
+				$this->set('first','title');
+				$this->set('second','company');
+				$this->set('third','industry');
+				$this->set('type',$type);
+			
+			}
+			else {
+				$this->set('value',$work[$id][$key]); 
+				$this->set('editing',true);
+				$this->set('id',$id);
+				$this->set('type',$type);
+				$this->set('key',$key);
+			}*/
+		}
+		if ($type=='Work'){
+				$this->set('first','title');
+				$this->set('second','company');
+				$this->set('third','industry');
+				$this->set('type',$type);
+			
+			}
+			elseif ($type=='School'){
+				$this->set('first','degree');
+				$this->set('second','school');
+				$this->set('third','major');
+				$this->set('type',$type);
+			
+			
+			
+			
+			}
+			
+		$this->set('div_name','add_'.$type);
+		$this->render();
+	}
+
 }
 
 ?>
