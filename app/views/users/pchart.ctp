@@ -61,15 +61,15 @@ $graph->Stroke();*/
 // One minute timeout for the cached image
 // INLINE_NO means don't stream it back to the browser.
 $graph = new Graph(310,300,'auto');
-$graph->SetScale("textlin");
+$graph->SetScale("textlin", min($datay)*.9, max($datay)*1.02);
 $graph->img->SetMargin(60,60,60,60);
-$graph->yaxis->SetTitleMargin(45);
+//$graph->yaxis->SetTitleMargin(45);
 $graph->yaxis->scale->SetGrace(5);
 $graph->SetShadow();
-
+$graph->yaxis->hide();
 // Turn the tickmarks
 $graph->xaxis->SetTickSide(SIDE_DOWN);
-$graph->yaxis->SetTickSide(SIDE_LEFT);
+//$graph->yaxis->SetTickSide(SIDE_LEFT);
 
 // Create a bar pot
 $bplot = new BarPlot($datay);
@@ -102,7 +102,7 @@ $graph->title->Set($title);
 //$graph->yaxis->title->Set("Y-title");
 
 $graph->title->SetFont(FF_FONT1,FS_BOLD);
-$graph->yaxis->title->SetFont(FF_FONT1,FS_BOLD);
+//$graph->yaxis->title->SetFont(FF_FONT1,FS_BOLD);
 $graph->xaxis->title->SetFont(FF_FONT1,FS_BOLD);
 
 // Send back the HTML page which will call this script again

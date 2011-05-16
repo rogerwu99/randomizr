@@ -1,4 +1,3 @@
-
 <div id="leftcolumn_user" class="bodycopy" style="overflow:auto;">
      				
     <br /><br />
@@ -45,16 +44,15 @@ You are currently <? echo $titles; ?>
  You have the most experience in the 
  <? echo array_shift($top_industries); ?> industry. <br />
 <? endif; ?>
-<? if (!is_null($top_interests) || (!empty($top_interests))): ?>
-You are influenced by:<br />
-<? for ($counter=0;$counter<5;$counter++){
-	echo (string)($counter+1).' '.$top_interests[$counter]; 
-	?><br /><?
-}
+<? //if (!is_null($top_interests) || (!empty($top_interests))): ?>
+<!--You are influenced by:<br />
+<? //for ($counter=0;$counter<5;$counter++){
+	//echo (string)($counter+1).' '.$top_interests[$counter]; 
+	?><br />--><?
+//}
 	?>
-<? endif; ?>
-
-<?
+<? //endif; ?>
+<? /*
 	$control_yi = $your_interests[0]->value;
 		$length=5;
 		$count=0;
@@ -70,19 +68,19 @@ You are influenced by:<br />
 				}
 				else $length++;
 			}
-		?>
-<?   echo '<img src=\'pchart/'. $id[0].'/'. $id[1] .'/' .$id[2].'/'.$id[3].'/'.$id[4].'/'.$cats[0].'/'.$cats[1].'/'.$cats[2].'/'.$cats[3].'/'.$cats[4].'/Influences/\' />';  ?>
-                <? if (!is_null($top_you) || (!empty($top_you))) : ?>    
-
-You are seen as :<br />
-<? for ($counter=0;$counter<5;$counter++){
-	echo (string)($counter+1).' '.$top_you[$counter]; 
+	*/	?>
+<?  // echo '<img src=\'pchart/'. $id[0].'/'. $id[1] .'/' .$id[2].'/'.$id[3].'/'.$id[4].'/'.$cats[0].'/'.$cats[1].'/'.$cats[2].'/'.$cats[3].'/'.$cats[4].'/Influences/\' />';  ?>
+                <? // if (!is_null($top_you) || (!empty($top_you))) : ?>    
+<!--
+You are seen as :<br />-->
+<? //for ($counter=0;$counter<5;$counter++){
+//	echo (string)($counter+1).' '.$top_you[$counter]; 
 	?><br /><?
-}
+//}
 	?>
-<? endif; ?>
+<? // endif; ?>
 <?
-			$control_am = $aboutme[0]->value;
+	/*		$control_am = $aboutme[0]->value;
 		$length=5;
 		$count=0;
 	//		echo 'About Me<br>';
@@ -97,36 +95,39 @@ You are seen as :<br />
 				}
 				else $length++;
 			}
-
+*/
 ?>
-<?   echo '<img src=\'pchart/'. $id[0].'/'. $id[1] .'/' .$id[2].'/'.$id[3].'/'.$id[4].'/'.$cats[0].'/'.$cats[1].'/'.$cats[2].'/'.$cats[3].'/'.$cats[4].'/You/\' />';  ?>
+<? //   echo '<img src=\'pchart/'. $id[0].'/'. $id[1] .'/' .$id[2].'/'.$id[3].'/'.$id[4].'/'.$cats[0].'/'.$cats[1].'/'.$cats[2].'/'.$cats[3].'/'.$cats[4].'/You/\' />';  ?>
 
 
-<? if (!is_null($top_movies) || (!empty($top_movies))) : ?>    
-Your Top 5 Movie Genres:<br />
-<? for ($counter=0;$counter<5;$counter++){
-	echo (string)($counter+1).' '.$top_movies[$counter]; 
+<? //if (!is_null($top_movies) || (!empty($top_movies))) : ?>    
+<!--Your Top 5 Movie Genres:<br />
+<? //for ($counter=0;$counter<5;$counter++){
+	//echo (string)($counter+1).' '.$top_movies[$counter]; 
 	?><br /><?
-}
+//}
 	?>
-   <? endif ;?>
-    <? if (!is_null($top_categories) || (!empty($top_categories))) : ?>    
+   <? //endif ;?>
+    <? //if (!is_null($top_categories) || (!empty($top_categories))) : ?>    
 
 You like to go to:<br />
-<? for ($counter=0;$counter<5;$counter++){
-	echo (string)($counter+1).' '.$top_categories[$counter]; 
-	?><br /><?
-}
-	?>   <? endif ;?>
-    <? if (!is_null($top_locations) || (!empty($top_locations))) : ?>    
+<? //for ($counter=0;$counter<5;$counter++){
+	//echo (string)($counter+1).' '.$top_categories[$counter]; 
+	?><br />--><?
+//}
+	?>   <? //endif ;?>
+    <? //if (!is_null($top_locations) || (!empty($top_locations))) : ?>    
 
-You frequent:<br />
-<? for ($counter=0;$counter<5;$counter++){
-	echo (string)($counter+1).' '.$top_locations[$counter]; 
+<!--You frequent:<br />
+<? //for ($counter=0;$counter<5;$counter++){
+	//echo (string)($counter+1).' '.$top_locations[$counter]; 
 	?><br /><?
-}
+//}
 	?>
-    <? endif; ?>
+    <? //endif; ?>
+    <? //echo var_dump($friends); ?>
+    -->
+See <? echo $html->link('friends',array('controller'=>'users','action'=>'view_my_friends/50')); ?>    
 </div>
 </div>
 	
